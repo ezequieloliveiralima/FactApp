@@ -1,81 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ddc-Dt-fiY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
-        <scene sceneID="chr-eM-hak">
-            <objects>
-                <viewController id="NEt-2C-YzW" customClass="MainView" customModule="FactApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="s4x-JK-mn8"/>
-                        <viewControllerLayoutGuide type="bottom" id="I0q-AP-Rfx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fwA-hU-ksd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4a-X8-mrz">
-                                <rect key="frame" x="0.0" y="436" width="319" height="164"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfY-Ir-yhO">
-                                <rect key="frame" x="0.0" y="313" width="259" height="123"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzt-iF-fdI">
-                                <rect key="frame" x="0.0" y="149" width="103" height="164"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVO-iZ-6xq">
-                                <rect key="frame" x="433" y="447" width="167" height="153"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARR-iO-xxW">
-                                <rect key="frame" x="481" y="283" width="119" height="164"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9W-hC-bG8">
-                                <rect key="frame" x="428" y="119" width="172" height="164"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Os6-f4-1A9">
-                                <rect key="frame" x="361" y="159" width="67" height="154"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9f-VR-bja">
-                                <rect key="frame" x="475" y="-5" width="125" height="124"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-1v-y7j">
-                                <rect key="frame" x="0.0" y="0.0" width="243" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Stb-Kc-lxd">
-                                <rect key="frame" x="0.0" y="49" width="20" height="101"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6J-HW-Ktt">
-                                <rect key="frame" x="433" y="283" width="49" height="75"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="zgt-zL-Dqb"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0hT-3X-hnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="728" y="-336"/>
-        </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FactApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -105,109 +37,9 @@
                         <outlet property="mapView" destination="h0E-6b-aqS" id="fsy-uF-zz6"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="332"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Kb2-uD-u9j">
-            <objects>
-                <viewController id="mCF-7b-dei" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KdV-mq-FAk"/>
-                        <viewControllerLayoutGuide type="bottom" id="cEm-G1-8rG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Byr-yb-ztd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="XFK-iE-Vsr" customClass="CircularScroll" customModule="FactApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nfk-MD-Nzn">
-                                        <rect key="frame" x="0.0" y="0.0" width="683" height="600"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SouthAmeria" translatesAutoresizingMaskIntoConstraints="NO" id="wUt-6a-OAe">
-                                                <rect key="frame" x="16" y="120" width="276" height="359"/>
-                                                <variation key="widthClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="18" y="132" width="276" height="359"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Europe" translatesAutoresizingMaskIntoConstraints="NO" id="U8P-im-aDb">
-                                                <rect key="frame" x="315" y="120" width="329" height="179"/>
-                                                <variation key="widthClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="244" y="103" width="329" height="179"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AfricanContinent" translatesAutoresizingMaskIntoConstraints="NO" id="qG1-yN-GdO">
-                                                <rect key="frame" x="400" y="307" width="249" height="222"/>
-                                                <variation key="widthClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="318" y="271" width="198" height="179"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asia1" translatesAutoresizingMaskIntoConstraints="NO" id="W3a-wo-Q7v">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                <variation key="widthClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="555" y="198" width="240" height="155"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asia" translatesAutoresizingMaskIntoConstraints="NO" id="KjO-NF-I4x">
-                                                <rect key="frame" x="180" y="408" width="308" height="161"/>
-                                                <variation key="widthClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="529" y="112" width="308" height="161"/>
-                                                </variation>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <variation key="default">
-                                            <mask key="subviews">
-                                                <exclude reference="W3a-wo-Q7v"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
-                                            <mask key="subviews">
-                                                <include reference="W3a-wo-Q7v"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
-                                </variation>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="loG-oR-xBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="727.5" y="1042"/>
-        </scene>
-        <!--Test-->
-        <scene sceneID="qlj-pa-A5t">
-            <objects>
-                <viewController id="ddc-Dt-fiY" customClass="Test" customModule="FactApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UMC-OM-XIp"/>
-                        <viewControllerLayoutGuide type="bottom" id="weK-Te-0oQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0yq-gv-wAv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YVX-6M-mRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="727.5" y="1741"/>
+            <point key="canvasLocation" x="-240" y="-981"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AfricanContinent" width="200" height="190"/>
-        <image name="Asia" width="507" height="183"/>
-        <image name="Asia1" width="478" height="308"/>
-        <image name="Europe" width="351" height="204"/>
-        <image name="SouthAmeria" width="200" height="267"/>
-    </resources>
 </document>
