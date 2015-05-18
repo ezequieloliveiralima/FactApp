@@ -16,6 +16,7 @@
 		E631FAB41B05011F00BF0CDA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E631FAB31B05011F00BF0CDA /* MapKit.framework */; };
 		E631FAB81B050F3500BF0CDA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FAB71B050F3500BF0CDA /* MainView.swift */; };
 		E631FABA1B05140C00BF0CDA /* CircularScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FAB91B05140C00BF0CDA /* CircularScroll.swift */; };
+		E63DCC6F1B0A63DA004F5274 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63DCC6E1B0A63DA004F5274 /* NotificationCenter.swift */; };
 		E64C83E11B0660E400EF864B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83DC1B0660E400EF864B /* Bolts.framework */; };
 		E64C83E21B0660E400EF864B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83DD1B0660E400EF864B /* Parse.framework */; };
 		E64C83E31B0660E400EF864B /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83DE1B0660E400EF864B /* ParseCrashReporting.framework */; };
@@ -34,6 +35,7 @@
 		E64C83FB1B06620600EF864B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83FA1B06620600EF864B /* libz.dylib */; };
 		E64C83FD1B06620D00EF864B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83FC1B06620D00EF864B /* libsqlite3.dylib */; };
 		E667BCAC1B06718700741292 /* CustomViewWithMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667BCAB1B06718700741292 /* CustomViewWithMap.swift */; };
+		E6BA5F1C1B0A42540082B9B5 /* InfoContinentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 		E631FAB31B05011F00BF0CDA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E631FAB71B050F3500BF0CDA /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E631FAB91B05140C00BF0CDA /* CircularScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularScroll.swift; sourceTree = "<group>"; };
+		E63DCC6E1B0A63DA004F5274 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		E64C83DC1B0660E400EF864B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E64C83DD1B0660E400EF864B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E64C83DE1B0660E400EF864B /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		E64C83FA1B06620600EF864B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E64C83FC1B06620D00EF864B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E667BCAB1B06718700741292 /* CustomViewWithMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewWithMap.swift; sourceTree = "<group>"; };
+		E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoContinentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 				E631FA951B0500B200BF0CDA /* ViewController.swift */,
 				E667BCAB1B06718700741292 /* CustomViewWithMap.swift */,
 				E631FA971B0500B200BF0CDA /* Main.storyboard */,
+				E63DCC6E1B0A63DA004F5274 /* NotificationCenter.swift */,
+				E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */,
 				E631FAB91B05140C00BF0CDA /* CircularScroll.swift */,
 				E631FAB71B050F3500BF0CDA /* MainView.swift */,
 				E631FA9A1B0500B200BF0CDA /* Images.xcassets */,
@@ -294,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E631FAB81B050F3500BF0CDA /* MainView.swift in Sources */,
+				E6BA5F1C1B0A42540082B9B5 /* InfoContinentViewController.swift in Sources */,
+				E63DCC6F1B0A63DA004F5274 /* NotificationCenter.swift in Sources */,
 				E667BCAC1B06718700741292 /* CustomViewWithMap.swift in Sources */,
 				E631FA961B0500B200BF0CDA /* ViewController.swift in Sources */,
 				E631FA941B0500B200BF0CDA /* AppDelegate.swift in Sources */,
@@ -432,6 +440,7 @@
 				);
 				INFOPLIST_FILE = FactApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -446,6 +455,7 @@
 				);
 				INFOPLIST_FILE = FactApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -8,11 +8,13 @@
 
 import UIKit
 import MapKit
+import Foundation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager : CLLocationManager!
+    var toGo : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +29,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             CLLocationCoordinate2D(latitude: 39.50, longitude: -98.35),
             CLLocationCoordinate2D(latitude: 56.46, longitude: -116.48),
             CLLocationCoordinate2D(latitude: 19.26, longitude: -99.8),
-            CLLocationCoordinate2D(latitude: -10, longitude: -55),
-            CLLocationCoordinate2D(latitude: 4.19, longitude: 15.9),
-            CLLocationCoordinate2D(latitude: 48.52, longitude: 19),
-            CLLocationCoordinate2D(latitude: 55.46, longitude: 37.40),
-            CLLocationCoordinate2D(latitude: 39.55, longitude: 116.23)
+            CLLocationCoordinate2D(latitude: -10, longitude: -55)
+//            CLLocationCoordinate2D(latitude: 4.19, longitude: 15.9),
+//            CLLocationCoordinate2D(latitude: 48.52, longitude: 19),
+//            CLLocationCoordinate2D(latitude: 55.46, longitude: 37.40),
+//            CLLocationCoordinate2D(latitude: 39.55, longitude: 116.23)
         ]
         
         let coordinates_title = [
             "Estados Unidos da América",
             "Canadá",
             "México",
-            "Brasil",
-            "Continente Africano",
-            "Europa",
-            "Russia",
-            "China"
+            "Brasil"
+//            "Continente Africano",
+//            "Europa",
+//            "Russia",
+//            "China"
         ]
         
         for i in 0..<coordinates.count {
@@ -63,9 +65,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-        if view.annotation.title == "China" {
-            print("Ola")
-        }
+        toGo = view.annotation.title!
     }
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
@@ -80,8 +80,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return annotationView
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        let notificacao = NSNotificationCenter.defaultCenter()
+        var message: NSDictionary = NSDictionary(object: toGo, forKey: "title")
+        
+        notificacao.postNotificationName("WILLGET", object: nil, userInfo: message as [NSObject : AnyObject])
+    }
+    
     func btnCheck(sender : AnyObject) {
-        print(sender)
+        NotificationCenter.defaultCenter.selected = toGo
+        
+        var vc = self.storyboard!.instantiateViewControllerWithIdentifier("Info") as! InfoContinentViewController
+        self.navigationController!.pushViewController(vc, animated: true)
     }
 }
 
