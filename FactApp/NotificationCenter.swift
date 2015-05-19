@@ -10,6 +10,9 @@ import Foundation
 
 class NotificationCenter {
     var selected = ""
+    var data = [AnyObject]()
+    var toView = ""
+    
     static let defaultCenter = NotificationCenter()
     private init() {}
 }

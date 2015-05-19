@@ -14,7 +14,7 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var txtTitle: UILabel!
     var country = ""
-    var data = [AnyObject]()
+
     
     override func loadView() {
         super.loadView()
@@ -27,11 +27,10 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
 //        let notificacao = NSNotificationCenter.defaultCenter()
 //        notificacao.addObserver(self, selector: "teste:", name: "WILLGET", object: nil)
         
-        var predicate = NSPredicate(format: "pais = %@", NSString(string: country))
+        var predicate = NSPredicate(format: "pais = %@", NSString(string: self.country))
         var consulta = PFQuery(className: "Particularidades", predicate: predicate)
         var error : NSErrorPointer = nil
-        data = consulta.findObjects(error)!
-        
+        NotificationCenter.defaultCenter.data = consulta.findObjects(error)!
     }
     
     override func viewDidLoad() {
@@ -51,7 +50,7 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return NotificationCenter.defaultCenter.data.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -61,9 +60,15 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "particularidade")
         
-        cell.textLabel!.text = data[indexPath.row].objectForKey("titulo") as? String
+        cell.textLabel!.text = NotificationCenter.defaultCenter.data[indexPath.row].objectForKey("titulo") as? String
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        NotificationCenter.defaultCenter.toView = (NotificationCenter.defaultCenter.data[indexPath.row].objectForKey("titulo") as? String)!
+        var vc = self.storyboard!.instantiateViewControllerWithIdentifier("particularidades") as! ParticularidadesViewController
+        self.navigationController!.pushViewController(vc, animated: true)
     }
     
     /*

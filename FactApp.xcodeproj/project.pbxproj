@@ -36,6 +36,8 @@
 		E64C83FD1B06620D00EF864B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83FC1B06620D00EF864B /* libsqlite3.dylib */; };
 		E667BCAC1B06718700741292 /* CustomViewWithMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667BCAB1B06718700741292 /* CustomViewWithMap.swift */; };
 		E6BA5F1C1B0A42540082B9B5 /* InfoContinentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */; };
+		E6C701B31B0B99AA0022EC87 /* funcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C701B21B0B99AA0022EC87 /* funcs.swift */; };
+		E6C701B71B0BB6A40022EC87 /* ParticularidadesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C701B61B0BB6A40022EC87 /* ParticularidadesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		E64C83FC1B06620D00EF864B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E667BCAB1B06718700741292 /* CustomViewWithMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewWithMap.swift; sourceTree = "<group>"; };
 		E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoContinentViewController.swift; sourceTree = "<group>"; };
+		E6C701B21B0B99AA0022EC87 /* funcs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funcs.swift; sourceTree = "<group>"; };
+		E6C701B61B0BB6A40022EC87 /* ParticularidadesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticularidadesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +165,12 @@
 			children = (
 				E631FA931B0500B200BF0CDA /* AppDelegate.swift */,
 				E631FA951B0500B200BF0CDA /* ViewController.swift */,
+				E6C701B21B0B99AA0022EC87 /* funcs.swift */,
 				E667BCAB1B06718700741292 /* CustomViewWithMap.swift */,
 				E631FA971B0500B200BF0CDA /* Main.storyboard */,
 				E63DCC6E1B0A63DA004F5274 /* NotificationCenter.swift */,
 				E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */,
+				E6C701B61B0BB6A40022EC87 /* ParticularidadesViewController.swift */,
 				E631FAB91B05140C00BF0CDA /* CircularScroll.swift */,
 				E631FAB71B050F3500BF0CDA /* MainView.swift */,
 				E631FA9A1B0500B200BF0CDA /* Images.xcassets */,
@@ -304,8 +310,10 @@
 				E63DCC6F1B0A63DA004F5274 /* NotificationCenter.swift in Sources */,
 				E667BCAC1B06718700741292 /* CustomViewWithMap.swift in Sources */,
 				E631FA961B0500B200BF0CDA /* ViewController.swift in Sources */,
+				E6C701B31B0B99AA0022EC87 /* funcs.swift in Sources */,
 				E631FA941B0500B200BF0CDA /* AppDelegate.swift in Sources */,
 				E631FABA1B05140C00BF0CDA /* CircularScroll.swift in Sources */,
+				E6C701B71B0BB6A40022EC87 /* ParticularidadesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
