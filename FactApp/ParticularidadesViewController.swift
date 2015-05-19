@@ -8,15 +8,42 @@
 
 import UIKit
 
-class ParticularidadesViewController: UIViewController {
+class ParticularidadesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
-    @IBOutlet weak var txtTitulo: UILabel!
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
     
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomCell", forIndexPath: indexPath) as! CustomCollectionViewCell
+        
+        var ImageName:String = "\(indexPath.row + 1)"
+        var imageForCell:UIImage = UIImage(named: "Brasil")!
+        cell.image = imageForCell
+        let yOffset:CGFloat = ((collectionView.contentOffset.y - cell.frame.origin.y) / 200) * 25
+        cell.imageOffset = CGPointMake(0, yOffset)
+        
+        return cell
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        txtTitulo.text = NotificationCenter.defaultCenter.toView
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        for view in collectionView.visibleCells(){
+            var view:CustomCollectionViewCell = view as! CustomCollectionViewCell
+            let yOffset:CGFloat = ((collectionView.contentOffset.y - view.frame.origin.y) / 200) * 25
+            view.setImageOffset(CGPointMake(0, yOffset))
+        }
     }
 }
