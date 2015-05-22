@@ -76,10 +76,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
             application.registerForRemoteNotificationTypes(types)
         }
-
+        
+        let myDefault = NotificationCenter.defaultCenter
+        
+        let query = PFQuery(className: "Particularidades")
+        query.selectKeys(["titulo", "corpo", "pais", "tipo"])
+        query.findObjectsInBackgroundWithBlock({
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                for request in objects! {
+                    let particularity = Particularity()
+                    particularity.body = request.objectForKey("corpo") as! String
+                    particularity.country = request.objectForKey("pais") as! String
+                    particularity.title = request.objectForKey("titulo") as! String
+                    particularity.type = request.objectForKey("tipo") as! String
+                    
+                    switch particularity.country {
+                    case "Brasil":
+                        myDefault.dataBrazil.append(particularity)
+                        break
+                    case "Canada":
+                        myDefault.dataCanada.append(particularity)
+                        break
+                    case "USA":
+                        myDefault.dataUSA.append(particularity)
+                        break
+                    case "Mexico":
+                        myDefault.dataMexico.append(particularity)
+                        break
+                    case "Central":
+                        myDefault.dataCentral.append(particularity)
+                        break
+                    default:
+                        myDefault.data.append(particularity)
+                        break
+                    }
+                }
+            }
+        })
+        
         return true
     }
-
+    
     ///////////////////////////////////////////////////////////
     // Uncomment this method if you want to use Push Notifications with Background App Refresh
     ///////////////////////////////////////////////////////////

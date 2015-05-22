@@ -7,10 +7,18 @@
 //
 
 import Foundation
+import Parse
 
 class NotificationCenter {
     var selected = ""
     var data = [AnyObject]()
+    
+    var dataBrazil = [Particularity]()
+    var dataMexico = [Particularity]()
+    var dataCentral = [Particularity]()
+    var dataUSA = [Particularity]()
+    var dataCanada = [Particularity]()
+    
     var toView = ""
     
     static let defaultCenter = NotificationCenter()

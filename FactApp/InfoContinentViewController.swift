@@ -13,34 +13,19 @@ import Parse
 class InfoContinentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var txtTitle: UILabel!
-    var country = ""
-
+    var info = [ "Música", "Arte", "Gastronomia" ]
     
     override func loadView() {
         super.loadView()
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController!.title = NotificationCenter.defaultCenter.selected as String
-        country = self.navigationController!.title!
-//        let notificacao = NSNotificationCenter.defaultCenter()
-//        notificacao.addObserver(self, selector: "teste:", name: "WILLGET", object: nil)
-        
-        var predicate = NSPredicate(format: "pais = %@", NSString(string: self.country))
-        var consulta = PFQuery(className: "Particularidades", predicate: predicate)
-        var error : NSErrorPointer = nil
-        NotificationCenter.defaultCenter.data = consulta.findObjects(error)!
+        info.sort({$0 < $1})
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    func teste(notification : NSNotification) {
-        let info: NSDictionary = notification.userInfo!
-        txtTitle.text = info.objectForKey("title") as? String
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,7 +35,7 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return NotificationCenter.defaultCenter.data.count
+        return info.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -60,15 +45,52 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "particularidade")
         
-        cell.textLabel!.text = NotificationCenter.defaultCenter.data[indexPath.row].objectForKey("titulo") as? String
+        let title = info[indexPath.row]
+        switch title {
+        case "Música":
+            cell.backgroundColor = UIColor(patternImage: UIImage(named: "Musica")!)
+            break
+        case "Arte":
+            cell.backgroundColor = UIColor(patternImage: UIImage(named: "Arte")!)
+            break
+        case "Gastronomia":
+            cell.backgroundColor = UIColor(patternImage: UIImage(named: "Gastronomia")!)
+            break
+        default:
+            println("")
+            break
+        }
         
         return cell
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(100)
+    }
+    
+    var row = 0
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        NotificationCenter.defaultCenter.toView = (NotificationCenter.defaultCenter.data[indexPath.row].objectForKey("titulo") as? String)!
-        var vc = self.storyboard!.instantiateViewControllerWithIdentifier("particularidades") as! ParticularidadesViewController
-        self.navigationController!.pushViewController(vc, animated: true)
+//        var vc = self.storyboard!.instantiateViewControllerWithIdentifier("particularidades") as! ParticularidadesViewController
+//        self.navigationController!.pushViewController(vc, animated: true)
+        row = indexPath.row
+        self.performSegueWithIdentifier("select", sender: self)
+
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animateWithDuration(0.25, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "select" {
+            if let destination = segue.destinationViewController as? ShowParticularities {
+                destination.received = info[row]
+            }
+        }
     }
     
     /*

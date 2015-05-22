@@ -39,7 +39,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     func setupImageView() {
         self.clipsToBounds = true
-        imageView = UIImageView(frame: CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 320, 155))
+        imageView = UIImageView(frame: CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.width, 100))
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.clipsToBounds = false
         self.addSubview(imageView)
