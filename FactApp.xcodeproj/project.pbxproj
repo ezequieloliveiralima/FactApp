@@ -36,6 +36,9 @@
 		E64C83FB1B06620600EF864B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83FA1B06620600EF864B /* libz.dylib */; };
 		E64C83FD1B06620D00EF864B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E64C83FC1B06620D00EF864B /* libsqlite3.dylib */; };
 		E6732CA81B0BCC81005FBEAD /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6732CA71B0BCC81005FBEAD /* CustomCollectionViewCell.swift */; };
+		E677C09D1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E677C09B1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift */; };
+		E677C09E1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E677C09C1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift */; };
+		E677C0A01B0FA73F001EE004 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E677C09F1B0FA73F001EE004 /* TourViewController.swift */; };
 		E69FEEB51B0D11930074A3F3 /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FEEB41B0D11930074A3F3 /* Teste.swift */; };
 		E69FEEBC1B0D1E120074A3F3 /* Particularity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FEEBB1B0D1E120074A3F3 /* Particularity.swift */; };
 		E6BA5F1C1B0A42540082B9B5 /* InfoContinentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */; };
@@ -88,6 +91,9 @@
 		E64C83FA1B06620600EF864B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E64C83FC1B06620D00EF864B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E6732CA71B0BCC81005FBEAD /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = FactApp/CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		E677C09B1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallaxCollectionViewCell.swift; path = FactApp/ParallaxCollectionViewCell.swift; sourceTree = "<group>"; };
+		E677C09C1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallaxCollectionViewController.swift; path = FactApp/ParallaxCollectionViewController.swift; sourceTree = "<group>"; };
+		E677C09F1B0FA73F001EE004 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		E69FEEB41B0D11930074A3F3 /* Teste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teste.swift; sourceTree = "<group>"; };
 		E69FEEBB1B0D1E120074A3F3 /* Particularity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Particularity.swift; sourceTree = "<group>"; };
 		E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoContinentViewController.swift; sourceTree = "<group>"; };
@@ -135,12 +141,14 @@
 		E631FA851B0500B200BF0CDA = {
 			isa = PBXGroup;
 			children = (
-				E69FEEB81B0D1A820074A3F3 /* Models */,
+				E677C09B1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift */,
+				E677C09C1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift */,
+				E69FEEB71B0D1A3B0074A3F3 /* Customs */,
 				E631FA901B0500B200BF0CDA /* FactApp */,
 				E631FAA61B0500B200BF0CDA /* FactAppTests */,
-				E631FA8F1B0500B200BF0CDA /* Products */,
-				E69FEEB71B0D1A3B0074A3F3 /* Customs */,
 				E69FEEB61B0D1A1B0074A3F3 /* Frameworks */,
+				E69FEEB81B0D1A820074A3F3 /* Models */,
+				E631FA8F1B0500B200BF0CDA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +169,7 @@
 				E6EC0EE31B0E595400AEA4CA /* ShowParticularities.swift */,
 				E6C701B21B0B99AA0022EC87 /* funcs.swift */,
 				E631FA971B0500B200BF0CDA /* Main.storyboard */,
+				E677C09F1B0FA73F001EE004 /* TourViewController.swift */,
 				E69FEEB41B0D11930074A3F3 /* Teste.swift */,
 				E63DCC6E1B0A63DA004F5274 /* NotificationCenter.swift */,
 				E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */,
@@ -344,6 +353,7 @@
 			files = (
 				E631FAB81B050F3500BF0CDA /* MainView.swift in Sources */,
 				E6732CA81B0BCC81005FBEAD /* CustomCollectionViewCell.swift in Sources */,
+				E677C09D1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift in Sources */,
 				E64ABAED1B0CF2F1006A03CA /* CustomTableViewCell.swift in Sources */,
 				E6BA5F1C1B0A42540082B9B5 /* InfoContinentViewController.swift in Sources */,
 				E6EC0EE41B0E595400AEA4CA /* ShowParticularities.swift in Sources */,
@@ -353,6 +363,8 @@
 				E69FEEB51B0D11930074A3F3 /* Teste.swift in Sources */,
 				E6C701B31B0B99AA0022EC87 /* funcs.swift in Sources */,
 				E631FA941B0500B200BF0CDA /* AppDelegate.swift in Sources */,
+				E677C0A01B0FA73F001EE004 /* TourViewController.swift in Sources */,
+				E677C09E1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift in Sources */,
 				E631FABA1B05140C00BF0CDA /* CircularScroll.swift in Sources */,
 				E6C701B71B0BB6A40022EC87 /* ParticularidadesViewController.swift in Sources */,
 			);
