@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21159DB51B14DE3600E09329 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21159DB41B14DE3600E09329 /* MapaViewController.swift */; };
 		E631FA941B0500B200BF0CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FA931B0500B200BF0CDA /* AppDelegate.swift */; };
 		E631FA961B0500B200BF0CDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E631FA951B0500B200BF0CDA /* ViewController.swift */; };
 		E631FA991B0500B200BF0CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E631FA971B0500B200BF0CDA /* Main.storyboard */; };
@@ -38,7 +39,6 @@
 		E6732CA81B0BCC81005FBEAD /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6732CA71B0BCC81005FBEAD /* CustomCollectionViewCell.swift */; };
 		E677C09D1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E677C09B1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift */; };
 		E677C09E1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E677C09C1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift */; };
-		E677C0A01B0FA73F001EE004 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E677C09F1B0FA73F001EE004 /* TourViewController.swift */; };
 		E69FEEB51B0D11930074A3F3 /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FEEB41B0D11930074A3F3 /* Teste.swift */; };
 		E69FEEBC1B0D1E120074A3F3 /* Particularity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FEEBB1B0D1E120074A3F3 /* Particularity.swift */; };
 		E6BA5F1C1B0A42540082B9B5 /* InfoContinentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */; };
@@ -58,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21159DB41B14DE3600E09329 /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		E631FA8E1B0500B200BF0CDA /* FactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E631FA921B0500B200BF0CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E631FA931B0500B200BF0CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		E6732CA71B0BCC81005FBEAD /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = FactApp/CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E677C09B1B0FA3E9001EE004 /* ParallaxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallaxCollectionViewCell.swift; path = FactApp/ParallaxCollectionViewCell.swift; sourceTree = "<group>"; };
 		E677C09C1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallaxCollectionViewController.swift; path = FactApp/ParallaxCollectionViewController.swift; sourceTree = "<group>"; };
-		E677C09F1B0FA73F001EE004 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		E69FEEB41B0D11930074A3F3 /* Teste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teste.swift; sourceTree = "<group>"; };
 		E69FEEBB1B0D1E120074A3F3 /* Particularity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Particularity.swift; sourceTree = "<group>"; };
 		E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoContinentViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +169,6 @@
 				E6EC0EE31B0E595400AEA4CA /* ShowParticularities.swift */,
 				E6C701B21B0B99AA0022EC87 /* funcs.swift */,
 				E631FA971B0500B200BF0CDA /* Main.storyboard */,
-				E677C09F1B0FA73F001EE004 /* TourViewController.swift */,
 				E69FEEB41B0D11930074A3F3 /* Teste.swift */,
 				E63DCC6E1B0A63DA004F5274 /* NotificationCenter.swift */,
 				E6BA5F1B1B0A42540082B9B5 /* InfoContinentViewController.swift */,
@@ -178,6 +177,7 @@
 				E631FA9A1B0500B200BF0CDA /* Images.xcassets */,
 				E631FA9C1B0500B200BF0CDA /* LaunchScreen.xib */,
 				E631FA911B0500B200BF0CDA /* Supporting Files */,
+				21159DB41B14DE3600E09329 /* MapaViewController.swift */,
 			);
 			path = FactApp;
 			sourceTree = "<group>";
@@ -362,8 +362,8 @@
 				E631FA961B0500B200BF0CDA /* ViewController.swift in Sources */,
 				E69FEEB51B0D11930074A3F3 /* Teste.swift in Sources */,
 				E6C701B31B0B99AA0022EC87 /* funcs.swift in Sources */,
+				21159DB51B14DE3600E09329 /* MapaViewController.swift in Sources */,
 				E631FA941B0500B200BF0CDA /* AppDelegate.swift in Sources */,
-				E677C0A01B0FA73F001EE004 /* TourViewController.swift in Sources */,
 				E677C09E1B0FA3E9001EE004 /* ParallaxCollectionViewController.swift in Sources */,
 				E631FABA1B05140C00BF0CDA /* CircularScroll.swift in Sources */,
 				E6C701B71B0BB6A40022EC87 /* ParticularidadesViewController.swift in Sources */,

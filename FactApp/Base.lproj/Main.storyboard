@@ -28,7 +28,7 @@
         <!--Item 2-->
         <scene sceneID="Gkb-lJ-Wwi">
             <objects>
-                <viewController id="S9G-ab-WZx" customClass="TourViewController" customModule="FactApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S9G-ab-WZx" customClass="MapaViewController" customModule="FactApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DEX-zu-Nsx"/>
                         <viewControllerLayoutGuide type="bottom" id="nnH-lZ-9vc"/>
@@ -36,9 +36,23 @@
                     <view key="view" contentMode="scaleToFill" id="ESb-Ad-kUT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ehs-nP-OUJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ehs-nP-OUJ" firstAttribute="top" secondItem="ESb-Ad-kUT" secondAttribute="topMargin" id="1N6-si-ora"/>
+                            <constraint firstItem="Ehs-nP-OUJ" firstAttribute="bottom" secondItem="ESb-Ad-kUT" secondAttribute="bottomMargin" id="9cc-az-HCk"/>
+                            <constraint firstItem="Ehs-nP-OUJ" firstAttribute="leading" secondItem="ESb-Ad-kUT" secondAttribute="leadingMargin" constant="-16" id="peR-4W-pTN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ehs-nP-OUJ" secondAttribute="trailing" constant="-16" id="v3E-IH-03c"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="d3r-f5-D3d"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ehs-nP-OUJ" id="d79-nt-CjZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbn-lo-AEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
