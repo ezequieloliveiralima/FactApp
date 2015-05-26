@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myDefault = NotificationCenter.defaultCenter
         
         let query = PFQuery(className: "Particularidades")
-        query.selectKeys(["titulo", "corpo", "pais", "tipo"])
+        query.selectKeys(["titulo", "corpo", "pais", "tipo", "info"])
         query.findObjectsInBackgroundWithBlock({
             (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
@@ -90,6 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     particularity.country = request.objectForKey("pais") as! String
                     particularity.title = request.objectForKey("titulo") as! String
                     particularity.type = request.objectForKey("tipo") as! String
+                    particularity.info = request.objectForKey("info") as! String
                     
                     switch particularity.country {
                     case "Brasil":

@@ -12,6 +12,7 @@ import CoreGraphics
 class ViewController: UIViewController {
     var toGo : String = ""
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var america: UIImageView!
     @IBOutlet weak var btnUSA: UIButton!
     @IBOutlet weak var btnBrazil: UIButton!
@@ -19,6 +20,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        scrollView.delegate = self
+//        scrollView.minimumZoomScale = 1
+//        scrollView.maximumZoomScale = 4
+        
         self.view.backgroundColor = hexaToUIColor("73B9FF")
         btnBrazil.addTarget(self, action: "btnGo:", forControlEvents: UIControlEvents.TouchUpInside)
         btnMexico.addTarget(self, action: "btnGo:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -71,7 +77,7 @@ class ViewController: UIViewController {
         }
         NSNotificationCenter.defaultCenter().postNotificationName("selected", object: self, userInfo: ["country": toGo])
         america.alpha = 1
-        UIView.animateWithDuration(NSTimeInterval(1), animations: {
+        UIView.animateWithDuration(NSTimeInterval(1.5), animations: {
             self.manageButtons(true)
             self.america.transform = CGAffineTransformMakeScale(40, 40)
             }, completion: {
@@ -88,5 +94,9 @@ class ViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+        
+//    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+//        return america
+//    }
 }
 

@@ -13,6 +13,7 @@ class Particularity {
     var body : String!
     var type : String!
     var country : String!
+    var info : String!
     
     init() {}
     

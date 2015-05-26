@@ -8,7 +8,7 @@
 
 import UIKit
 
-let ImageHeight: CGFloat = 200.0
+let ImageHeight: CGFloat = 300.0
 let OffsetSpeed: CGFloat = 25.0
 
 class ParallaxCollectionViewCell: UICollectionViewCell {
@@ -19,9 +19,6 @@ class ParallaxCollectionViewCell: UICollectionViewCell {
     func offset(offset: CGPoint) {
         parallaxImageView.frame = CGRectOffset(self.parallaxImageView.bounds, offset.x, offset.y)
     }
-    
-    
-    
     
     
 }

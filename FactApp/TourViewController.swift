@@ -10,16 +10,11 @@ import UIKit
 import MapKit
 
 class TourViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
-    @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.delegate = self
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()
     }
     
     override func loadView() {

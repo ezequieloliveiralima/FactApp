@@ -87,7 +87,7 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "select" {
-            if let destination = segue.destinationViewController as? ShowParticularities {
+            if let destination = segue.destinationViewController as? ParallaxCollectionViewController {
                 destination.received = info[row]
             }
         }
