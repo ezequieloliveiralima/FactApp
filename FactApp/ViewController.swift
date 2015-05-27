@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //        scrollView.delegate = self
 //        scrollView.minimumZoomScale = 1
 //        scrollView.maximumZoomScale = 4

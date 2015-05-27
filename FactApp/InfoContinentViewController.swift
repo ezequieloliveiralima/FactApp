@@ -74,6 +74,9 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
 //        var vc = self.storyboard!.instantiateViewControllerWithIdentifier("particularidades") as! ParticularidadesViewController
 //        self.navigationController!.pushViewController(vc, animated: true)
         row = indexPath.row
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         self.performSegueWithIdentifier("select", sender: self)
 
     }

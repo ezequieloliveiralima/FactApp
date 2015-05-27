@@ -10,8 +10,6 @@ import UIKit
 
 let reuseIdentifier = "parallaxCell"
 
-let images: [String] = ["Brasil.png","EUA.png","Mexico.png","Brasil.png","EUA.png","Mexico.png","Brasil.png","EUA.png","Mexico.png","Brasil.png","EUA.png","Mexico.png"]
-
 class ParallaxCollectionViewController: UICollectionViewController {
     
     var data = [Particularity]()
@@ -19,11 +17,19 @@ class ParallaxCollectionViewController: UICollectionViewController {
     var more = Particularity()
     var textMore: UITextView!
     var moreView: UIView!
-    var imageBack = UIImageView(frame: CGRectMake(0, 0, 300, 300))
+    var imageBack = UIImageView()
     var control = true
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        layout.itemSize = CGSize(width: UIScreen.mainScreen().bounds.width/3, height: UIScreen.mainScreen().bounds.width/3)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        
+        self.imageBack.frame = CGRect(x: 0, y: 65, width: self.view.frame.width, height: self.view.frame.height-100)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showInfo:", name: "selectItem", object: nil)
         
@@ -61,13 +67,14 @@ class ParallaxCollectionViewController: UICollectionViewController {
             break
         }
         
-        moreView = UIView(frame: CGRectMake(CGFloat(UIScreen.mainScreen().bounds.width/2-150), CGFloat(UIScreen.mainScreen().bounds.height/2-150), 300, 300))
+        moreView = UIView(frame: self.view.bounds)
         
-        textMore = UITextView(frame: CGRectMake(0, 0, 300, 300))
+        textMore = UITextView(frame: self.view.bounds)
         textMore.text = more.body
         textMore.editable = false
         textMore.scrollEnabled = true
         textMore.selectable = false
+        
         // Blur effect
         var blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
         var blurView = UIVisualEffectView(effect: blur)
@@ -91,19 +98,12 @@ class ParallaxCollectionViewController: UICollectionViewController {
                 j.frame = CGRectMake(j.bounds.origin.x, j.bounds.origin.y, self.collectionView!.bounds.width, 200)
             }
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotate:", name: "rotacionou", object: nil)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Register cell classes
-        //        self.collectionView!.registerClass(ParallaxCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
         // Do any additional setup after loading the view.
     }
     
@@ -117,7 +117,7 @@ class ParallaxCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     /*
     // MARK: - Navigation
     
@@ -145,8 +145,6 @@ class ParallaxCollectionViewController: UICollectionViewController {
         
         var parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxCollectionViewCell
         
-        //        parallaxCell.parallaxImageView?.image = UIImage(named: images[indexPath.row])!
-        //
         if data[indexPath.row].type == "imagem" {
             let url = NSURL(string: data[indexPath.row].body!)
             let nsdata = NSData(contentsOfURL: url!)
@@ -155,22 +153,7 @@ class ParallaxCollectionViewController: UICollectionViewController {
             }
         }
         
-        //        parallaxCell.frame = CGRectMake(parallaxCell.frame.origin.x, parallaxCell.frame.origin.y, UIScreen.mainScreen().bounds.width, 180)
-        //        parallaxCell.parallaxImageView.frame = CGRectMake(parallaxCell.frame.origin.x, parallaxCell.frame.origin.y, parallaxCell.frame.width, parallaxCell.frame.height+20)
-        
-        //        parallaxCell.parallaxImageView.bounds = parallaxCell.bounds
-        
-        if self.received == "Música" {
-            parallaxCell.backgroundColor = hexaToUIColor("000000")
-            imageBack.image = UIImage(named: "musica_bg")
-        } else if self.received == "Gastronomia" {
-            parallaxCell.backgroundColor = hexaToUIColor("000000")
-            imageBack.image = UIImage(named: "gast_icon")
-        } else {
-            parallaxCell.backgroundColor = hexaToUIColor("000000")
-            imageBack.image = UIImage(named: "arte_icon")
-        }
-        
+        parallaxCell.backgroundColor = hexaToUIColor("000000")
         return parallaxCell
     }
     
@@ -180,13 +163,6 @@ class ParallaxCollectionViewController: UICollectionViewController {
     
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        //        if let visibleCells = collectionView!.visibleCells() as? [ParallaxCollectionViewCell] {
-        //            for parallaxCell in visibleCells {
-        //                var yOffset = ((collectionView!.contentOffset.y - parallaxCell.frame.origin.y) / ImageHeight) * OffsetSpeed
-        //                parallaxCell.offset(CGPointMake(0.0, yOffset))
-        //            }
-        //        }
-        
         let vC = collectionView!.subviews
         for i in vC {
             if let j = i as? ParallaxCollectionViewCell {
@@ -208,9 +184,11 @@ class ParallaxCollectionViewController: UICollectionViewController {
     }
     
     func showInfo(message: NSNotification) {
-        let userinfo = message.userInfo as! NSDictionary
-        //        print(userinfo.objectForKey("sel")!)
+        let userinfo = NSDictionary(dictionary: message.userInfo!)
         textMore.text = userinfo.objectForKey("sel") as! String
+        textMore.font = UIFont(name: "american typewriter", size: 15)
+        textMore.textColor = UIColor.blackColor()
+        textMore.textAlignment = NSTextAlignment.Justified
         moreView.hidden = false
     }
     
