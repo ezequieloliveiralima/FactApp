@@ -40,18 +40,45 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ehs-nP-OUJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-Qr-zqu">
+                                <rect key="frame" x="119" y="515" width="338" height="28"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iic-4g-Gly">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="29"/>
+                                        <segments>
+                                            <segment title="Museus"/>
+                                            <segment title="Teatros"/>
+                                            <segment title="Centro Culturais"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="S9G-ab-WZx" eventType="valueChanged" id="nzz-qm-nIk"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="iic-4g-Gly" firstAttribute="top" secondItem="ugs-Qr-zqu" secondAttribute="top" id="7MO-dm-g0p"/>
+                                    <constraint firstAttribute="trailing" secondItem="iic-4g-Gly" secondAttribute="trailing" id="9am-zb-bVx"/>
+                                    <constraint firstItem="iic-4g-Gly" firstAttribute="leading" secondItem="ugs-Qr-zqu" secondAttribute="leading" id="gjt-Pn-duE"/>
+                                    <constraint firstAttribute="bottom" secondItem="iic-4g-Gly" secondAttribute="bottom" id="zOE-lG-cRK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ehs-nP-OUJ" firstAttribute="top" secondItem="ESb-Ad-kUT" secondAttribute="topMargin" id="1N6-si-ora"/>
+                            <constraint firstItem="nnH-lZ-9vc" firstAttribute="top" secondItem="ugs-Qr-zqu" secondAttribute="bottom" constant="15" id="8Il-Nq-ytR"/>
                             <constraint firstItem="Ehs-nP-OUJ" firstAttribute="bottom" secondItem="ESb-Ad-kUT" secondAttribute="bottomMargin" id="9cc-az-HCk"/>
                             <constraint firstItem="Ehs-nP-OUJ" firstAttribute="leading" secondItem="ESb-Ad-kUT" secondAttribute="leadingMargin" constant="-16" id="peR-4W-pTN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ehs-nP-OUJ" secondAttribute="trailing" constant="-16" id="v3E-IH-03c"/>
+                            <constraint firstAttribute="centerX" secondItem="ugs-Qr-zqu" secondAttribute="centerX" id="wbI-9H-2Cj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="d3r-f5-D3d"/>
                     <connections>
                         <outlet property="mapView" destination="Ehs-nP-OUJ" id="d79-nt-CjZ"/>
+                        <outlet property="segmentedControl" destination="iic-4g-Gly" id="bom-u9-l2x"/>
+                        <outlet property="subView" destination="ugs-Qr-zqu" id="844-cC-ZO8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbn-lo-AEj" userLabel="First Responder" sceneMemberID="firstResponder"/>

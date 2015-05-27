@@ -13,7 +13,21 @@ import CoreLocation
 class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
 
+    @IBOutlet weak var subView: UIView!
+    
     @IBOutlet weak var mapView: MKMapView!
+
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        
+        switch segmentedControl.selectedSegmentIndex{
+        case 0: buscar("Museum");
+        case 1: buscar("Theater");
+        case 2: buscar("Centro Cultural");
+        default: break;
+        }
+    }
     
     var locationManager = CLLocationManager()
     var matchingItems: [MKMapItem] = [MKMapItem]()
@@ -32,22 +46,23 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         mapView.showsUserLocation = true
         mapView.showsPointsOfInterest = false
         
-        
-        buscar()
+    
+        buscar("Museum")
 
 
     }
     
-    func buscar() {
+    func buscar(requested:String) {
         
         regione.center.latitude = self.locationManager.location.coordinate.latitude
         regione.center.longitude = self.locationManager.location.coordinate.longitude
-        regione.span = MKCoordinateSpanMake(0.58, 0.58)
+        regione.span = MKCoordinateSpanMake(0.001, 0.0001)
         
+        self.mapView.removeAnnotations(self.mapView.annotations)
         matchingItems.removeAll()
         let request = MKLocalSearchRequest()
         
-        request.naturalLanguageQuery = "Museum"
+        request.naturalLanguageQuery = requested
         
         mapView.setRegion(regione, animated: true)
         
@@ -70,11 +85,17 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                     println("Nome = \(item.name)")
                     println("Fone = \(item.phoneNumber)")
                     println("End. = \(item.placemark.title)")
+                    println("url. = \(item.url)")
+                    println("")
                     
                     self.matchingItems.append(item as MKMapItem)
                     println("Matching items = \(self.matchingItems.count)")
                     
+                    
+                    
+                    
                     var annotation = MKPointAnnotation()
+                  
                     annotation.coordinate = item.placemark.coordinate
                     annotation.title = item.name
                     self.mapView.addAnnotation(annotation)
