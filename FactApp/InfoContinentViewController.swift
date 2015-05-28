@@ -20,6 +20,9 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     override func viewWillAppear(animated: Bool) {
+        if NotificationCenter.defaultCenter.selected == "Canada" {
+            info.append("Intercambio")
+        }
         info.sort({$0 < $1})
     }
     

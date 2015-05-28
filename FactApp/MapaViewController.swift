@@ -129,19 +129,6 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
     }
     
-//    - (void)mapView:(MKMapView *)mapView
-//    didAddAnnotationViews:(NSArray *)annotationViews
-//    {
-//    for (MKAnnotationView *annView in annotationViews)
-//    {
-//    CGRect endFrame = annView.frame;
-//    annView.frame = CGRectOffset(endFrame, 0, -500);
-//    [UIView animateWithDuration:0.5
-//    animations:^{ annView.frame = endFrame; }];
-//    }
-//    }
-    
-    
     // Animacao ao colocar os pins no mapa
     func mapView(mapView: MKMapView!, didAddAnnotationViews views: [AnyObject]!) {
         let arrr = views as! [MKAnnotationView]

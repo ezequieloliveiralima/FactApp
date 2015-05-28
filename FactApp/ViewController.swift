@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnUSA: UIButton!
     @IBOutlet weak var btnBrazil: UIButton!
     @IBOutlet weak var btnMexico: UIButton!
+    @IBOutlet weak var btnCanada: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
         btnBrazil.addTarget(self, action: "btnGo:", forControlEvents: UIControlEvents.TouchUpInside)
         btnMexico.addTarget(self, action: "btnGo:", forControlEvents: UIControlEvents.TouchUpInside)
         btnUSA.addTarget(self, action: "btnGo:", forControlEvents: UIControlEvents.TouchUpInside)
+        btnCanada.addTarget(self, action: "btnGo:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,6 +47,7 @@ class ViewController: UIViewController {
         btnBrazil.hidden = hidden
         btnMexico.hidden = hidden
         btnUSA.hidden    = hidden
+        btnCanada.hidden = hidden
     }
     
     func magic(imageNamed : String) {
@@ -70,6 +73,10 @@ class ViewController: UIViewController {
         case 3:
             toGo = "EUA"
             magic("EUAPais")
+            break
+        case 4:
+            toGo = "Canada"
+            magic("CanadaPais")
             break
         default:
             break
