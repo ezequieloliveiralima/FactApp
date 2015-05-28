@@ -12,11 +12,11 @@ import CoreLocation
 
 class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-
+    
     @IBOutlet weak var subView: UIView!
     
     @IBOutlet weak var mapView: MKMapView!
-
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
@@ -46,10 +46,10 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         mapView.showsUserLocation = true
         mapView.showsPointsOfInterest = false
         
-    
+        
         buscar("Museum")
-
-
+        
+        
     }
     
     func buscar(requested:String) {
@@ -95,7 +95,7 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                     
                     
                     var annotation = MKPointAnnotation()
-                  
+                    
                     annotation.coordinate = item.placemark.coordinate
                     annotation.title = item.name
                     self.mapView.addAnnotation(annotation)
@@ -104,8 +104,8 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         })
         
     }
-
-
+    
+    
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.AuthorizedWhenInUse{//esse if verifica se o status é autorizado enquanto o aplicativo esta em primeiro plano
             //se o if for verdadeiro mostraremos a localização do usuario no mapView
@@ -128,16 +128,41 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         }
         
     }
-  
-
+    
+//    - (void)mapView:(MKMapView *)mapView
+//    didAddAnnotationViews:(NSArray *)annotationViews
+//    {
+//    for (MKAnnotationView *annView in annotationViews)
+//    {
+//    CGRect endFrame = annView.frame;
+//    annView.frame = CGRectOffset(endFrame, 0, -500);
+//    [UIView animateWithDuration:0.5
+//    animations:^{ annView.frame = endFrame; }];
+//    }
+//    }
+    
+    
+    // Animacao ao colocar os pins no mapa
+    func mapView(mapView: MKMapView!, didAddAnnotationViews views: [AnyObject]!) {
+        let arrr = views as! [MKAnnotationView]
+        for annView : MKAnnotationView in arrr {
+            let endFrame = annView.frame
+            annView.frame = CGRectOffset(endFrame, 0, -500)
+            UIView.animateWithDuration(0.5, animations: {() -> Void in
+                annView.frame = endFrame
+            })
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

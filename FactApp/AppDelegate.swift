@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     case "Canada":
                         myDefault.dataCanada.append(particularity)
                         break
-                    case "USA":
+                    case "EUA":
                         myDefault.dataUSA.append(particularity)
                         break
                     case "Mexico":

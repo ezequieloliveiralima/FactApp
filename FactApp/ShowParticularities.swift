@@ -37,6 +37,24 @@ class ShowParticularities: UIViewController, UITableViewDataSource, UITableViewD
                 }
             }
             break
+        case "Mexico":
+            for p : Particularity in myData.dataMexico {
+                if p.title == received && p.type != "mais" {
+                    data.append(p)
+                } else if p.type == "mais" && p.title == received {
+                    more = p
+                }
+            }
+            break
+        case "USA":
+            for p : Particularity in myData.dataUSA {
+                if p.title == received && p.type != "mais" {
+                    data.append(p)
+                } else if p.type == "mais" && p.title == received {
+                    more = p
+                }
+            }
+            break
         default:
             break
         }

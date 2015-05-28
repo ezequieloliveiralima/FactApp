@@ -54,7 +54,7 @@ class ParallaxCollectionViewController: UICollectionViewController {
                 }
             }
             break
-        case "USA":
+        case "EUA":
             for p : Particularity in myData.dataUSA {
                 if p.title == received && p.type != "mais" {
                     data.append(p)
@@ -117,7 +117,7 @@ class ParallaxCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     /*
     // MARK: - Navigation
     
