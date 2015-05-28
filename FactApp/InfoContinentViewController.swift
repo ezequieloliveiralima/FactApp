@@ -23,7 +23,7 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
         if NotificationCenter.defaultCenter.selected == "Canada" {
             info.append("Intercambio")
         }
-        info.sort({$0 < $1})
+//        info.sort({$0 < $1})
     }
     
     override func viewDidLoad() {
@@ -59,6 +59,10 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
         case "Gastronomia":
             cell.backgroundColor = UIColor(patternImage: UIImage(named: "Gastronomia")!)
             break
+        case "Intercambio":
+            cell.backgroundColor = UIColor(patternImage: UIImage(named: "Intercambio")!)
+            break
+
         default:
             println("")
             break

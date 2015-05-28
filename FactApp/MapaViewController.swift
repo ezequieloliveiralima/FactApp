@@ -46,7 +46,6 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         mapView.showsUserLocation = true
         mapView.showsPointsOfInterest = false
         
-        
         buscar("Museum")
         
         
@@ -135,7 +134,7 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         for annView : MKAnnotationView in arrr {
             let endFrame = annView.frame
             annView.frame = CGRectOffset(endFrame, 0, -500)
-            UIView.animateWithDuration(0.5, animations: {() -> Void in
+            UIView.animateWithDuration(1, animations: {() -> Void in
                 annView.frame = endFrame
             })
         }

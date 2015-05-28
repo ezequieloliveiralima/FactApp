@@ -63,6 +63,15 @@ class ParallaxCollectionViewController: UICollectionViewController {
                 }
             }
             break
+        case "Canada":
+            for p : Particularity in myData.dataCanada {
+                if p.title == received && p.type != "mais" {
+                    data.append(p)
+                } else if p.type == "mais" && p.title == received {
+                    more = p
+                }
+            }
+            break
         default:
             break
         }
