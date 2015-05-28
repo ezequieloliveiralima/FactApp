@@ -13,7 +13,7 @@ import Parse
 class InfoContinentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var txtTitle: UILabel!
-    var info = [ "Música", "Arte", "Gastronomia" ]
+    var info = [ "Música", "Arte", "Gastronomia", "PontoTuristico" ]
     
     override func loadView() {
         super.loadView()
@@ -62,7 +62,9 @@ class InfoContinentViewController: UIViewController, UITableViewDelegate, UITabl
         case "Intercambio":
             cell.backgroundColor = UIColor(patternImage: UIImage(named: "Intercambio")!)
             break
-
+        case "PontoTuristico":
+            cell.backgroundColor = UIColor(patternImage: UIImage(named: "pontosTuristicos")!)
+            break
         default:
             println("")
             break
