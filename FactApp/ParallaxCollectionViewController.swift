@@ -22,6 +22,8 @@ class ParallaxCollectionViewController: UICollectionViewController {
     var imageBack = UIImageView()
     var control = true
     
+    var imagens = [UIImage]()
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -76,6 +78,16 @@ class ParallaxCollectionViewController: UICollectionViewController {
             break
         default:
             break
+        }
+        
+        for p : Particularity in data {
+            if p.type == "imagem" {
+                let url = NSURL(string: p.body!)
+                let nsdata = NSData(contentsOfURL: url!)
+                if let img = UIImage(data: nsdata!) {
+                    imagens.append(img)
+                }
+            }
         }
         
         moreView = UIView(frame: self.view.bounds)
@@ -156,13 +168,7 @@ class ParallaxCollectionViewController: UICollectionViewController {
         
         var parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxCollectionViewCell
         
-        if data[indexPath.row].type == "imagem" {
-            let url = NSURL(string: data[indexPath.row].body!)
-            let nsdata = NSData(contentsOfURL: url!)
-            if let img = UIImage(data: nsdata!) {
-                parallaxCell.parallaxImageView!.image = img
-            }
-        }
+        parallaxCell.parallaxImageView!.image = imagens[indexPath.row]
         
         parallaxCell.backgroundColor = hexaToUIColor("000000")
         return parallaxCell
