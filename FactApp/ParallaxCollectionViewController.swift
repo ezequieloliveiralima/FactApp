@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import MediaPlayer
 
 let reuseIdentifier = "parallaxCell"
 
 class ParallaxCollectionViewController: UICollectionViewController {
+    var mediaPlayer : MPMoviePlayerController = MPMoviePlayerController()
     
     var data = [Particularity]()
     var received : String = ""
@@ -167,6 +169,12 @@ class ParallaxCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if data[indexPath.row].title == "Música" {
+            mediaPlayer.stop()
+            let music = data[indexPath.row] as! Music
+            mediaPlayer.contentURL = NSURL(string: music.url)
+            mediaPlayer.play()
+        }
         NSNotificationCenter.defaultCenter().postNotificationName("selectItem", object: nil, userInfo: ["sel" : data[indexPath.row].info])
     }
     

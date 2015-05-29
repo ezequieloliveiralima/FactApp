@@ -80,17 +80,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myDefault = NotificationCenter.defaultCenter
         
         let query = PFQuery(className: "Particularidades")
-        query.selectKeys(["titulo", "corpo", "pais", "tipo", "info"])
+        query.selectKeys(["titulo", "corpo", "pais", "tipo", "info", "url"])
         query.findObjectsInBackgroundWithBlock({
             (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 for request in objects! {
-                    let particularity = Particularity()
-                    particularity.body = request.objectForKey("corpo") as! String
-                    particularity.country = request.objectForKey("pais") as! String
-                    particularity.title = request.objectForKey("titulo") as! String
-                    particularity.type = request.objectForKey("tipo") as! String
-                    particularity.info = request.objectForKey("info") as! String
+                    var particularity : Particularity!
+                    
+                    if request.objectForKey("titulo") as! String == "Música" {
+                        var body = request.objectForKey("corpo") as! String
+                        var country = request.objectForKey("pais") as! String
+                        var title = request.objectForKey("titulo") as! String
+                        var type = request.objectForKey("tipo") as! String
+                        var info = request.objectForKey("info") as! String
+                        
+                        var url = request.objectForKey("url") as! String
+                        particularity = Music(title: title, body: body, type: type, country: country, url: url)
+                        particularity.info = info
+                    } else {
+                        var body = request.objectForKey("corpo") as! String
+                        var country = request.objectForKey("pais") as! String
+                        var title = request.objectForKey("titulo") as! String
+                        var type = request.objectForKey("tipo") as! String
+                        var info = request.objectForKey("info") as! String
+
+                        particularity = Particularity(title: title, body: body, type: type, country: country)
+                        particularity.info = info
+                    }
                     
                     switch particularity.country {
                     case "Brasil":

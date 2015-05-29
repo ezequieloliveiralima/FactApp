@@ -44,6 +44,7 @@
 		E6BD4B301B1643D3000AD270 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD4B2F1B1643D3000AD270 /* MapaViewController.swift */; };
 		E6C701B31B0B99AA0022EC87 /* funcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C701B21B0B99AA0022EC87 /* funcs.swift */; };
 		E6C701B71B0BB6A40022EC87 /* ParticularidadesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C701B61B0BB6A40022EC87 /* ParticularidadesViewController.swift */; };
+		E6DB33271B18D2CF00527804 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DB33261B18D2CF00527804 /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		E6BD4B2F1B1643D3000AD270 /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapaViewController.swift; path = FactApp/MapaViewController.swift; sourceTree = "<group>"; };
 		E6C701B21B0B99AA0022EC87 /* funcs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = funcs.swift; sourceTree = "<group>"; };
 		E6C701B61B0BB6A40022EC87 /* ParticularidadesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticularidadesViewController.swift; sourceTree = "<group>"; };
+		E6DB33261B18D2CF00527804 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				E69FEEBB1B0D1E120074A3F3 /* Particularity.swift */,
+				E6DB33261B18D2CF00527804 /* Music.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				E64ABAED1B0CF2F1006A03CA /* CustomTableViewCell.swift in Sources */,
 				E6BA5F1C1B0A42540082B9B5 /* InfoContinentViewController.swift in Sources */,
 				E69FEEBC1B0D1E120074A3F3 /* Particularity.swift in Sources */,
+				E6DB33271B18D2CF00527804 /* Music.swift in Sources */,
 				E63DCC6F1B0A63DA004F5274 /* NotificationCenter.swift in Sources */,
 				E631FA961B0500B200BF0CDA /* ViewController.swift in Sources */,
 				E69FEEB51B0D11930074A3F3 /* Teste.swift in Sources */,

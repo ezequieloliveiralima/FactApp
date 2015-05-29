@@ -5,11 +5,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Crn-jq-Mrk">
             <objects>
                 <navigationController modalTransitionStyle="partialCurl" id="ERa-Y8-9Y8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cIH-oW-pAV"/>
+                    <tabBarItem key="tabBarItem" title="" image="globo" id="cIH-oW-pAV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uL-tL-MoS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="203" y="-580"/>
         </scene>
-        <!--Item 2-->
+        <!--Mapa View Controller-->
         <scene sceneID="Gkb-lJ-Wwi">
             <objects>
                 <viewController id="S9G-ab-WZx" customClass="MapaViewController" customModule="FactApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                             <constraint firstAttribute="centerX" secondItem="ugs-Qr-zqu" secondAttribute="centerX" id="wbI-9H-2Cj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="d3r-f5-D3d"/>
+                    <tabBarItem key="tabBarItem" title="" image="navegacao" id="d3r-f5-D3d"/>
                     <connections>
                         <outlet property="mapView" destination="Ehs-nP-OUJ" id="d79-nt-CjZ"/>
                         <outlet property="segmentedControl" destination="iic-4g-Gly" id="bom-u9-l2x"/>
@@ -350,5 +350,7 @@
         <image name="EUA" width="70" height="50"/>
         <image name="Mexico" width="72" height="52"/>
         <image name="americas_map" width="1878" height="2448"/>
+        <image name="globo" width="31" height="41"/>
+        <image name="navegacao" width="31" height="41"/>
     </resources>
 </document>
