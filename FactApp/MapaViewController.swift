@@ -63,7 +63,7 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         request.naturalLanguageQuery = requested
         
-        mapView.setRegion(regione, animated: true)
+//        mapView.setRegion(regione, animated: true)
         
         request.region = regione
         

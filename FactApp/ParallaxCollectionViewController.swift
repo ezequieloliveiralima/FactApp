@@ -113,20 +113,20 @@ class ParallaxCollectionViewController: UICollectionViewController {
         
         self.view.addSubview(moreView)
         
-        let vC = collectionView!.subviews
-        for i in vC {
-            if let j = i as? ParallaxCollectionViewCell {
-                var yOffset = ((collectionView!.contentOffset.y - j.frame.origin.y) / ImageHeight) * OffsetSpeed
-                j.offset(CGPointMake(0.0, yOffset))
-                j.frame = CGRectMake(j.bounds.origin.x, j.bounds.origin.y, self.collectionView!.bounds.width, 200)
-            }
-        }
+//        let vC = collectionView!.subviews
+//        for i in vC {
+//            if let j = i as? ParallaxCollectionViewCell {
+//                var yOffset = ((collectionView!.contentOffset.y - j.frame.origin.y) / ImageHeight) * OffsetSpeed
+//                j.offset(CGPointMake(0.0, yOffset))
+//                j.frame = CGRectMake(j.bounds.origin.x, j.bounds.origin.y, self.collectionView!.bounds.width, 200)
+//            }
+//        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotate:", name: "rotacionou", object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotate:", name: "rotacionou", object: nil)
         // Do any additional setup after loading the view.
     }
     
